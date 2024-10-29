@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Commande de livres informatiques</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid black; }
+        th, td { padding: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Commande de livres informatiques</h1>
+
+    <label for="bookSelect">Langage :</label>
+    <select id="bookSelect" onchange="afficher()">
+        <option value="">--Sélectionnez un livre--</option>
+    </select>
+
+    <div id="bookDetails"></div>
+    <button onclick="ajouter()">Ajouter au panier</button>
+
+    <h2>Panier</h2>
+    <table id="cartTable">
+        <thead>
+            <tr>
+                <th>ISBN</th>
+                <th>Titre</th>
+                <th>Image</th>
+                <th>Prix</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <p id="totalPrice">Prix total à payer: 0</p>
+
+    <script src="script.js"></script>
+</body>
+</html>

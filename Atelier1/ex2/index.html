@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Book Management</title>
+    <script defer src="app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="p-8 bg-gray-100">
+    <div class="container mx-auto">
+        
+        <div class="mb-6">
+            <h2 class="text-xl font-bold">Formulaire Pour ajouter un livre dans bibliothèque</h2>
+            <form id="bookForm" class="space-y-4">
+                <div class="flex flex-col">
+                    <label for="ref" class="text-sm font-medium">Ref :</label>
+                    <input type="text" id="ref" class="border border-gray-300 p-2 rounded" placeholder="L001">
+                    <span id="refError" class="text-red-500 text-sm hidden">Format invalide : L suivie de 3 chiffres</span>
+                </div>
+                <div class="flex flex-col">
+                    <label for="title" class="text-sm font-medium">Titre :</label>
+                    <input type="text" id="title" class="border border-gray-300 p-2 rounded">
+                    <span id="titleError" class="text-red-500 text-sm hidden">Le titre doit avoir entre 2 et 50 caractères</span>
+                </div>
+                <div class="flex flex-col">
+                    <label for="date" class="text-sm font-medium">Date d'édition :</label>
+                    <input type="date" id="date" class="border border-gray-300 p-2 rounded">
+                </div>
+                <div class="flex flex-col">
+                    <label for="genre" class="text-sm font-medium">Genre :</label>
+                    <select id="genre" class="border border-gray-300 p-2 rounded">
+                    </select>
+                </div>
+                <div class="flex flex-col">
+                    <label for="copies" class="text-sm font-medium">Nombre d'exemplaire :</label>
+                    <input type="number" id="copies" class="border border-gray-300 p-2 rounded" min="1">
+                    <span id="copiesError" class="text-red-500 text-sm hidden">Le nombre doit être supérieur à 0</span>
+                </div>
+                <button type="button" id="addButton" class="px-4 py-2 bg-blue-500 text-white rounded">Ajouter</button>
+            </form>
+        </div>
+
+        <div>
+            <h2 class="text-xl font-bold mb-4">Liste des livres</h2>
+            <table class="min-w-full bg-white border">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 border">REF</th>
+                        <th class="py-2 px-4 border">TITRE</th>
+                        <th class="py-2 px-4 border">GENRE</th>
+                        <th class="py-2 px-4 border">DATE D'EDITION</th>
+                        <th class="py-2 px-4 border">NOMBRE D'exemplaire</th>
+                        <th class="py-2 px-4 border">ACTION</th>
+                    </tr>
+                </thead>
+                <tbody id="bookList">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

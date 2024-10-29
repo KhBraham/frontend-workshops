@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Commande de livres informatiques</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+
+    <h1 class="text-3xl font-bold mb-6 text-center">Commande de livres informatiques</h1>
+
+    <div class="max-w-lg mx-auto mb-8">
+        <label for="bookSelect" class="block text-lg font-medium mb-2">Langage :</label>
+        <select id="bookSelect" onchange="afficher()" class="w-full p-2 border border-gray-300 rounded-md mb-4">
+            <option value="">--Sélectionnez un livre--</option>
+        </select>
+        
+        <div id="bookDetails" class="p-4 border border-gray-300 rounded-md bg-white mb-4"></div>
+        <button onclick="ajouter()" class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Ajouter au panier</button>
+    </div>
+
+    <h2 class="text-2xl font-semibold mb-4 text-center">Panier</h2>
+    
+    <div class="max-w-2xl mx-auto bg-white p-4 rounded-lg shadow-md">
+        <table id="cartTable" class="w-full border border-gray-300 text-left">
+            <thead>
+                <tr class="bg-gray-200 text-gray-600">
+                    <th class="p-2 border">ISBN</th>
+                    <th class="p-2 border">Titre</th>
+                    <th class="p-2 border">Image</th>
+                    <th class="p-2 border">Prix</th>
+                    <th class="p-2 border">Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <p id="totalPrice" class="text-right text-lg font-semibold mt-4">Prix total à payer: 0</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
