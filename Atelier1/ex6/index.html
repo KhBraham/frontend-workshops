@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeu de Memory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Jeu de Memory</h1>
+  <div class="jeu" id="jeu">
+    <!-- Cartes du jeu (chaque image est dupliquée pour former des paires) -->
+    <div class="case" onclick="revealCard(1)"><img id="img1" src="pho1.jpg" alt="photo1"></div>
+    <div class="case" onclick="revealCard(2)"><img id="img2" src="pho1.jpg" alt="photo1"></div>
+    <div class="case" onclick="revealCard(3)"><img id="img3" src="pho2.jpg" alt="photo2"></div>
+    <div class="case" onclick="revealCard(4)"><img id="img4" src="pho2.jpg" alt="photo2"></div>
+    <div class="case" onclick="revealCard(5)"><img id="img5" src="pho3.jpg" alt="photo3"></div>
+    <div class="case" onclick="revealCard(6)"><img id="img6" src="pho3.jpg" alt="photo3"></div>
+    <div class="case" onclick="revealCard(7)"><img id="img7" src="pho4.jpg" alt="photo4"></div>
+    <div class="case" onclick="revealCard(8)"><img id="img8" src="pho4.jpg" alt="photo4"></div>
+    <div class="case" onclick="revealCard(9)"><img id="img9" src="pho5.jpg" alt="photo5"></div>
+    <div class="case" onclick="revealCard(10)"><img id="img10" src="pho5.jpg" alt="photo5"></div>
+    <div class="case" onclick="revealCard(11)"><img id="img11" src="pho6.jpg" alt="photo6"></div>
+    <div class="case" onclick="revealCard(12)"><img id="img12" src="pho6.jpg" alt="photo6"></div>
+    <div class="case" onclick="revealCard(13)"><img id="img13" src="pho7.jpg" alt="photo7"></div>
+    <div class="case" onclick="revealCard(14)"><img id="img14" src="pho7.jpg" alt="photo7"></div>
+    <div class="case" onclick="revealCard(15)"><img id="img15" src="pho8.jpg" alt="photo8"></div>
+    <div class="case" onclick="revealCard(16)"><img id="img16" src="pho8.jpg" alt="photo8"></div>
+  </div>
+  <p id="score">Score: 0</p>
+  <p id="timer">Temps restant: 60s</p>
+  <button onclick="startGame('facile')">Niveau Facile</button>
+  <button onclick="startGame('moyen')">Niveau Moyen</button>
+  <button onclick="startGame('difficile')">Niveau Difficile</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

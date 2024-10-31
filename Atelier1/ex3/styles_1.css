@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: all 0.3s;
+}
+div{
+    background-color: #fff;
+    width: 40%;
+    height: 200px;
+    margin-left: 30%;
+    border-radius: 10px;
+}
+div p{
+    color: gray;
+    margin-left: 10px;
+
+}
+div select{
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+    transition: color 0.3s;
+}
+
+
+.clair {
+    background-color: #f3f3f3;
+    color: #333;
+}
+.clair h1,p {
+    color: #333;
+}
+.clair select {
+    background-color: #fff;
+    color: #333;
+}
+
+
+.sombre {
+    background-color: #333;
+    color: #fff;
+}
+.sombre h1,p {
+    color: #ccc;
+}
+.sombre select {
+    background-color: #222;
+    color: #fff;
+}
+
+
+.colore {
+    background-color: #e74c3c;
+    color: #fff;
+}
+.colore h1 {
+    color: #e74c3c;
+}
+.colore p {
+    color: #ccc;
+}
+.colore select {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+
+select {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}

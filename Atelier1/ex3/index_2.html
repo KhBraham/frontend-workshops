@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changer de Langue</title>
+    <link rel="stylesheet" href="styles_2.css">
+</head>
+<body>
+    <div>
+        <h1 id="title">Changer de Langue</h1>
+        <select id="languageSelector">
+            <option value="fr">Français</option>
+            <option value="en">Anglais</option>
+            <option value="es">Espagnol</option>
+        </select>
+        <p id="content">Bienvenue sur notre page ! Sélectionnez votre langue préférée dans le menu déroulant ci-dessus.</p>
+    
+    </div>
+
+    <script>
+        const translations = {
+            fr: {
+                title: "Changer de Langue",
+                content: "Bienvenue sur notre page ! Sélectionnez votre langue préférée dans le menu déroulant ci-dessus.",
+                options: { fr: "Français", en: "Anglais", es: "Espagnol" }
+            },
+            en: {
+                title: "Change Language",
+                content: "Welcome to our page! Please select your preferred language from the dropdown above.",
+                options: { fr: "French", en: "English", es: "Spanish" }
+            },
+            es: {
+                title: "Cambiar Idioma",
+                content: "¡Bienvenido a nuestra página! Seleccione su idioma preferido en el menú desplegable de arriba.",
+                options: { fr: "Francés", en: "Inglés", es: "Español" }
+            }
+        };
+
+        
+        const titleElement = document.getElementById('title');
+        const contentElement = document.getElementById('content');
+        const languageSelector = document.getElementById('languageSelector');
+
+        
+        function changeLanguage(language) {
+            
+            titleElement.textContent = translations[language].title;
+            contentElement.textContent = translations[language].content;
+
+            
+            languageSelector.options[0].text = translations[language].options.fr;
+            languageSelector.options[1].text = translations[language].options.en;
+            languageSelector.options[2].text = translations[language].options.es;
+        }
+
+        
+        languageSelector.addEventListener('change', () => {
+            changeLanguage(languageSelector.value);
+        });
+
+        
+        changeLanguage('fr');
+    </script>
+</body>
+</html>

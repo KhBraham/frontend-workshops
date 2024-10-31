@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choix du Thème</title>
+    <link rel="stylesheet" href="styles_1.css">
+</head>
+<body class="clair">
+    <div>
+        <h1>Choix du Thème</h1>
+        <p>Selectionnez un theme:</p>
+        <select id="themeSelector">
+            <option value="clair">Theme Clair</option>
+            <option value="sombre">Theme Sombre</option>
+            <option value="colore">Theme Coloré</option>
+        </select>
+    </div>
+    
+
+    <script>
+        
+        const themeSelector = document.getElementById('themeSelector');
+
+        
+        themeSelector.addEventListener('change', () => {
+            
+            document.body.classList.remove('clair', 'sombre', 'colore');
+            document.body.classList.add(themeSelector.value);
+        });
+    </script>
+
+</body>
+</html>

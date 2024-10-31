@@ -1,0 +1,33 @@
+body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+.jeu {
+      width: 520px;
+      height: 520px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+.case {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      border: 1px solid black;
+      background-color: #9999FF;
+      position: relative;
+      cursor: pointer;
+    }
+    
+img {
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+    }
+    
+button {
+      margin: 10px;
+    }
+    
